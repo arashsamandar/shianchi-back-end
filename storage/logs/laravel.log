@@ -1,0 +1,567 @@
+[2020-01-17 12:14:41] production.ERROR: ErrorException: Methods with the same name as their class will not be constructors in a future version of PHP; PclZip has a deprecated constructor in D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\PCLZip\pclzip.lib.php:190
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Methods with th...', 'D:\\Laravel_Proj...', 190, Array)
+#1 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): require_once()
+#2 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Autoloader.php(86): require('D:\\Laravel_Proj...')
+#3 [internal function]: PHPExcel_Autoloader::Load('PHPExcel_Shared...')
+#4 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php(227): spl_autoload_call('PHPExcel_Shared...')
+#5 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(225): PHPExcel_Writer_Excel2007->save('D:\\Laravel_Proj...')
+#6 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#7 [internal function]: App\Console\Commands\Crawl->handle()
+#8 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#9 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2020-01-17 12:22:55] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function Wego\son_decode() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:96
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(167): Wego\Crawler::sendCurl('https://www.dig...')
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:24:36] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:188
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(188): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 188, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:25:15] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:188
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(188): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 188, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:28:00] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:189
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(189): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 189, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:28:41] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:190
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(190): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 190, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:29:16] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:190
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(190): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 190, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:30:07] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:191
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(191): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 191, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:31:37] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:191
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(191): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 191, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:36:26] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:186
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(186): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 186, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 12:36:41] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:187
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(187): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 187, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 13:03:11] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:187
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(187): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 187, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(74): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 13:08:59] production.ERROR: ErrorException: Methods with the same name as their class will not be constructors in a future version of PHP; PclZip has a deprecated constructor in D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\PCLZip\pclzip.lib.php:190
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Methods with th...', 'D:\\Laravel_Proj...', 190, Array)
+#1 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): require_once()
+#2 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Autoloader.php(86): require('D:\\Laravel_Proj...')
+#3 [internal function]: PHPExcel_Autoloader::Load('PHPExcel_Shared...')
+#4 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php(227): spl_autoload_call('PHPExcel_Shared...')
+#5 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(227): PHPExcel_Writer_Excel2007->save('D:\\Laravel_Proj...')
+#6 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(75): Wego\Crawler::crawlCategories(Array, 2)
+#7 [internal function]: App\Console\Commands\Crawl->handle()
+#8 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#9 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2020-01-17 13:11:09] production.ERROR: ErrorException: ZipArchive::close(): Failure to create temporary file: No error in D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php:398
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'ZipArchive::clo...', 'D:\\Laravel_Proj...', 398, Array)
+#1 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php(398): ZipArchive->close()
+#2 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(227): PHPExcel_Writer_Excel2007->save('D:\\Laravel_Proj...')
+#3 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(75): Wego\Crawler::crawlCategories(Array, 2)
+#4 [internal function]: App\Console\Commands\Crawl->handle()
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 {main}  
+[2020-01-17 13:13:38] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:187
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(187): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 187, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(75): Wego\Crawler::crawlCategories(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 13:33:32] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected 'curl_setopt' (T_STRING) in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:91
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('D:\\Laravel_Proj...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Wego\\Crawler')
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(75): spl_autoload_call('Wego\\Crawler')
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-17 13:55:25] production.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: There are no commands defined in the "make:" namespace.
+
+Did you mean this?
+    make in D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php:488
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(520): Symfony\Component\Console\Application->findNamespace('make:')
+#1 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(182): Symfony\Component\Console\Application->find('make::command')
+#2 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main}  
+[2020-01-17 13:58:38] production.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "newcrawl" is not defined. in D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php:534
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(182): Symfony\Component\Console\Application->find('newcrawl')
+#1 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2020-01-17 14:26:43] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:458
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(458): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 458, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory('external-hard-d...')
+#2 [internal function]: App\Console\Commands\NewCrawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 14:27:46] production.ERROR: ErrorException: Methods with the same name as their class will not be constructors in a future version of PHP; PclZip has a deprecated constructor in D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\PCLZip\pclzip.lib.php:190
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8192, 'Methods with th...', 'D:\\Laravel_Proj...', 190, Array)
+#1 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Shared\ZipArchive.php(31): require_once()
+#2 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Autoloader.php(86): require('D:\\Laravel_Proj...')
+#3 [internal function]: PHPExcel_Autoloader::Load('PHPExcel_Shared...')
+#4 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php(227): spl_autoload_call('PHPExcel_Shared...')
+#5 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(678): PHPExcel_Writer_Excel2007->save('D:\\Laravel_Proj...')
+#6 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory(Array)
+#7 [internal function]: App\Console\Commands\NewCrawl->handle()
+#8 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#9 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 {main}  
+[2020-01-17 14:30:01] production.ERROR: ErrorException: Array to string conversion in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:250
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(250): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Array to string...', 'D:\\Laravel_Proj...', 250, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(83): Wego\Crawler::crawlCategory(Array, 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 14:35:25] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:251
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(251): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 251, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(83): Wego\Crawler::crawlCategory('external-hard-d...', 2)
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 15:11:18] production.ERROR: ErrorException: Invalid argument supplied for foreach() in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:461
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(461): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'Invalid argumen...', 'D:\\Laravel_Proj...', 461, Array)
+#1 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(83): Wego\Crawler::crawlNewCategory('external-hard-d...')
+#2 [internal function]: App\Console\Commands\Crawl->handle()
+#3 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#5 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 {main}  
+[2020-01-17 15:12:03] production.ERROR: ErrorException: ZipArchive::close(): Failure to create temporary file: No error in D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php:398
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'ZipArchive::clo...', 'D:\\Laravel_Proj...', 398, Array)
+#1 D:\Laravel_Projects\shianchi\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\Excel2007.php(398): ZipArchive->close()
+#2 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(681): PHPExcel_Writer_Excel2007->save('D:\\Laravel_Proj...')
+#3 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(83): Wego\Crawler::crawlNewCategory(Array)
+#4 [internal function]: App\Console\Commands\Crawl->handle()
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#6 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#7 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 {main}  
+[2020-01-17 15:33:45] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '$persianBrandName' (T_VARIABLE) in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\composer\ClassLoader.php(322): Composer\Autoload\includeFile('D:\\Laravel_Proj...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('Wego\\Crawler')
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(83): spl_autoload_call('Wego\\Crawler')
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 10:38:30] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\NewCrawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 10:43:21] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\NewCrawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:13:05] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\NewCrawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:16:32] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:484
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(486): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\NewCrawl.php(41): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\NewCrawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\NewCrawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:21:23] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:23:22] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:25:45] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(485): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:31:49] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(486): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:38:20] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(486): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:38:50] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(486): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:41:31] production.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Wego\Crawler::Wego\{closure}() must be an instance of Wego\ٔ, instance of Symfony\Component\DomCrawler\Crawler given, called in D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php on line 371 in D:\Laravel_Projects\shianchi\app\Wego\Crawler.php:483
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\dom-crawler\Crawler.php(371): Wego\Crawler::Wego\{closure}(Object(Symfony\Component\DomCrawler\Crawler), 0)
+#1 D:\Laravel_Projects\shianchi\app\Wego\Crawler.php(486): Symfony\Component\DomCrawler\Crawler->each(Object(Closure))
+#2 D:\Laravel_Projects\shianchi\app\Console\Commands\Crawl.php(78): Wego\Crawler::crawlNewCategory(Array)
+#3 [internal function]: App\Console\Commands\Crawl->handle()
+#4 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Container\Container.php(508): call_user_func_array(Array, Array)
+#5 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(169): Illuminate\Container\Container->call(Array)
+#6 D:\Laravel_Projects\shianchi\vendor\symfony\console\Command\Command.php(261): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Console\Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(817): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(185): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\Crawl), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 {main}  
+[2020-01-18 23:52:39] production.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "newcrawl" is not defined. in D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php:534
+Stack trace:
+#0 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(182): Symfony\Component\Console\Application->find('newcrawl')
+#1 D:\Laravel_Projects\shianchi\vendor\symfony\console\Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 D:\Laravel_Projects\shianchi\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 D:\Laravel_Projects\shianchi\artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
